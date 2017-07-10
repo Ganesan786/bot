@@ -4,7 +4,7 @@ body, html {
 }.container_Block {
     display: flex;
     flex-direction: column;
-    background: #f5f5f5;
+    background: #fff;
     height: 100%;
 }.header_Block {
     background: linear-gradient(141deg, #ff595f 0%, #ff595f 51%, #f32955 75%);
@@ -17,15 +17,15 @@ body, html {
     width: 85%;
     margin: 0 auto;
 }#input.search_Input {
-    background: #fff;
+    background: #f5f5f5;
     padding: 50px 0;
-    border-radius: 60px;
-    margin-top: -50px;
-    border: 0;
+    border: 1px solid #f5f5f5;
     width: 100%;
-    padding-left: 50px;
     box-sizing: border-box;
     font-size: 30px;
+    text-align: center;
+    border-left: 0;
+    border-right: 0;
 }.search_Input:focus {
     outline: none;
 }.hd_3 {
@@ -37,9 +37,10 @@ body, html {
 }.content_Block {
 	flex: 1;
 	overflow: auto;
+    padding: 10px;
 }
 .footer_Block {
-    background: #fff;
+    background: #f5f5f5;
     width: 100%;
     height: 100px;
 }.loader {
@@ -57,23 +58,26 @@ body, html {
     box-sizing: border-box;
 }.query {
     font-size: 40px;
-    background: #fff;
-    padding: 15px;
+    background: #e6e6e6;
+    padding: 30px;
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     display: inline-block;
     font-family: sans-serif;
+    width: 80%;
 }.result {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }.result .query {
     display: inline-block;
-    background: #37abb7;
+    background: #0f8bed;
     color: #fff;
 }
 .result .slideView.query {
     background:#fff;
     width:100%;
     color: #000;
+    padding: 0px;
 }
 .slideView img {
     height: 100%;
@@ -102,7 +106,50 @@ body, html {
     width: 50%;
 }
 #demos .owl-carousel .item img {
-    padding:1rem
+   padding: 1rem;
+    width: 340px;
+    height: 310px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+#demos .owl-carousel .item {
+    background: #ececec;
+    border-radius: 30px;
+    height: 34rem;
+    padding: 0 25px;
+}
+.col-spc-1 {
+    width: 10%;
+    float: left;
+}
+.col-spc-8 {
+    width: 80%;
+    float: left;
+}
+.flx-aj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.flx-aj .fnt-65 {
+    font-size: 65px;
+    color: #b7b7b7;
+    cursor: pointer;
+}
+.productTitle {
+    padding: 14px 0;
+    color: #797777;
+}
+.productPrize {
+    font-weight: bold;
+    font-size: 35px;
+}
+.viewItem {
+    text-align: center;
+    color: #0089ff;
+    padding-top: 10px;
+    font-size: 37px;
 }
 @keyframes blink {50% { color: transparent }}
 .loader__dot { animation: 1s blink infinite }

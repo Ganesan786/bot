@@ -9,7 +9,8 @@ giftShop.prototype = function(){
 	            loop: false,
 	            nav: false,
 				dots:false,
-	            margin: 10
+	            margin: 40,
+	            items:2
 	          });
 	          owl.on('mousewheel', '.owl-stage', function(e) {
 	            e.preventDefault();

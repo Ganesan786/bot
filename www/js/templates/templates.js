@@ -9,10 +9,18 @@ function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
   buffer += "\r\n                <div class=\"item\">\r\n                 <img src=";
-  if (helper = helpers.IMG) { stack1 = helper.call(depth0, {hash:{},data:data}); }
-  else { helper = (depth0 && depth0.IMG); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + " />\r\n                 <div class=\"btnGroup\">\r\n                    <div class=\"viewBtn\">View</div>\r\n                    <div class=\"buyBtn\">Buy</div>\r\n                  </div>\r\n                </div>\r\n              ";
+    + " />\r\n                 <div class=\"productTitle\">";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\r\n                 <div class=\"productPrize\">";
+  if (helper = helpers.price) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.price); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\r\n                 <div class=\"viewItem\">View Item</div>\r\n                 <!--div class=\"btnGroup\">\r\n                    <div class=\"viewBtn\">View</div>\r\n                    <div class=\"buyBtn\">Buy</div>\r\n                  </div-->\r\n                </div>\r\n              ";
   return buffer;
   }
 

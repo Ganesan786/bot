@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>Swordfish</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/docs.theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script src="lib/jquery.min.js"></script>
 	<script src="lib/owl.carousel.min.js"></script>
     <script src="lib/handlebars.min.js"></script>
@@ -15,18 +16,26 @@
 </head>
 <body>
 	<div class='container_Block'>
-		<div class='header_Block'>
+		<!-- <div class='header_Block'>
 			<h1 class='hd_3'>Swordfish</h1>
-		</div>
-		<div class='search_Block'>
+		</div> -->
+		<!-- <div class='search_Block'>
 			<input id="input" type="text" class='search_Input' name="" placeholder="Search">
-		</div>
+		</div> -->
 		<div class='content_Block'>
 			<div class='response_Block' id="response"></div>
 		</div>
 		<div class="loader"><span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></div>
 		<div class='footer_Block'>
-			
+			<div class="col-spc-1 flx-aj">
+				<i class="fa fa-plus fnt-65" aria-hidden="true"></i>
+			</div>
+			<div class="col-spc-8">
+				<input id="input" type="text" class='search_Input' name="" placeholder="Tap a message">
+			</div>
+			<div class="col-spc-1 flx-aj">
+				<i id="rec" class="fa fa-microphone fnt-65" aria-hidden="true"></i>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
