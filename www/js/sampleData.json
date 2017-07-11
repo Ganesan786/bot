@@ -1,124 +1,124 @@
 var giftList = {
     "marriage":[
         {
-           "img":"../img/m1.jpg",
+           "img":"../www/img/m1.jpg",
            "title":"Marriage Gift one",
            "price":"$ 150"
         },
         {
-           "img":"../img/m2.jpg",
+           "img":"../www/img/m2.jpg",
            "title":"Marriage Gift two",
            "price":"$ 250"
         },
         {
-           "img":"../img/m3.jpg",
+           "img":"../www/img/m3.jpg",
            "title":"Marriage Gift three",
            "price":"$ 350"
         },
         {
-           "img":"../img/m4.jpg",
+           "img":"../www/img/m4.jpg",
            "title":"Marriage Gift four",
            "price":"$ 450"
         },
         {
-           "img":"../img/m5.jpg",
+           "img":"../www/img/m5.jpg",
            "title":"Marriage Gift five",
            "price":"$ 550"
         },
         {
-           "img":"../img/m6.jpg",
+           "img":"../www/img/m6.jpg",
            "title":"Marriage Gift six",
            "price":"$ 650"
         },
         {
-           "img":"../img/m7.jpg",
+           "img":"../www/img/m7.jpg",
            "title":"Marriage Gift seven",
            "price":"$ 750"
         },
         {
-           "img":"../img/m8.jpg",
+           "img":"../www/img/m8.jpg",
            "title":"Marriage Gift eight",
            "price":"$ 850"
         },
         {
-           "img":"../img/m3.jpg",
+           "img":"../www/img/m3.jpg",
            "title":"Marriage Gift nine",
            "price":"$ 950"
         },
         {
-           "img":"../img/m1.jpg",
+           "img":"../www/img/m1.jpg",
            "title":"Marriage Gift ten",
            "price":"$ 1050"
         },
         {
-           "img":"../img/m2.jpg",
+           "img":"../www/img/m2.jpg",
            "title":"Marriage Gift eleven",
            "price":"$ 1150"
         },
         {
-           "img":"../img/m3.jpg",
+           "img":"../www/img/m3.jpg",
            "title":"Marriage Gift twelve",
            "price":"$ 1250"
         },
     ],
     "birthday":[
         {
-           "img":"../img/b1.jpg",
+           "img":"../www/img/b1.jpg",
            "title":"Birthday Gift one",
            "price":"$ 150"
         },
         {
-           "img":"../img/b2.jpg",
+           "img":"../www/img/b2.jpg",
            "title":"Birthday Gift two",
            "price":"$ 250"
         },
         {
-           "img":"../img/b3.jpg",
+           "img":"../www/img/b3.jpg",
            "title":"Birthday Gift three",
            "price":"$ 350"
         },
         {
-           "img":"../img/b4.jpg",
+           "img":"../www/img/b4.jpg",
            "title":"Birthday Gift four",
            "price":"$ 450"
         },
         {
-           "img":"../img/b5.jpg",
+           "img":"../www/img/b5.jpg",
            "title":"Birthday Gift five",
            "price":"$ 550"
         },
         {
-           "img":"../img/b6.jpg",
+           "img":"../www/img/b6.jpg",
            "title":"Birthday Gift six",
            "price":"$ 650"
         },
         {
-           "img":"../img/m7.jpg",
+           "img":"../www/img/m7.jpg",
            "title":"Birthday Gift seven",
            "price":"$ 750"
         },
         {
-           "img":"../img/b1.jpg",
+           "img":"../www/img/b1.jpg",
            "title":"Birthday Gift eight",
            "price":"$ 850"
         },
         {
-           "img":"../img/b3.jpg",
+           "img":"../www/img/b3.jpg",
            "title":"Birthday Gift nine",
            "price":"$ 950"
         },
         {
-           "img":"../img/m1.jpg",
+           "img":"../www/img/m1.jpg",
            "title":"Birthday Gift ten",
            "price":"$ 1050"
         },
         {
-           "img":"../img/b4.jpg",
+           "img":"../www/img/b4.jpg",
            "title":"Birthday Gift eleven",
            "price":"$ 1150"
         },
         {
-           "img":"../img/b2.jpg",
+           "img":"../www/img/b2.jpg",
            "title":"Birthday Gift twelve",
            "price":"$ 1250"
         },

@@ -6,9 +6,9 @@ function apiRequest() {
 apiRequest.prototype = function(){
 	init = function(){
 		var that = this;
-		this.accessToken 		= "24b9449d38e8424db925f984bf6814f1";
-		this.subscriptionKey 	= "24b9449d38e8424db925f984bf6814f1";
-		this.baseUrl 			= "https://api.api.ai/v1/";
+		that.accessToken 		= "24b9449d38e8424db925f984bf6814f1";
+		that.subscriptionKey 	= "24b9449d38e8424db925f984bf6814f1";
+		that.baseUrl 			= "https://api.api.ai/v1/";
 			$("#input").keypress(function(event) {
 				if (event.which == 13) {
 					event.preventDefault();
@@ -23,48 +23,54 @@ apiRequest.prototype = function(){
 	},
 
 	startRecognition = function() {
-			this.recognition = new webkitSpeechRecognition();
-			this.recognition.onstart = function(event) {
-				this.updateRec();
+			var that = this;
+			that.recognition = new webkitSpeechRecognition();
+			that.recognition.onstart = function(event) {
+				that.updateRec();
 			};
-			this.recognition.onresult = function(event) {
+			that.recognition.onresult = function(event) {
 				var text = "";
 			    for (var i = event.resultIndex; i < event.results.length; ++i) {
 			    	text += event.results[i][0].transcript;
 			    }
-			    this.setInput(text);
-				this.stopRecognition();
+			    that.setInput(text);
+				that.stopRecognition();
 			};
-			this.recognition.onend = function() {
-				this.stopRecognition();
+			that.recognition.onend = function() {
+				that.stopRecognition();
 			};
-			this.recognition.lang = "en-US";
-			this.recognition.start();
+			that.recognition.lang = "en-US";
+			that.recognition.start();
 	},
 
 	stopRecognition =	function() {
-		if (this.recognition) {
-			this.recognition.stop();
-			this.recognition = null;
+		var that = this;
+		if (that.recognition) {
+			that.recognition.stop();
+			that.recognition = null;
 		}
-		this.updateRec();
+		that.updateRec();
 	},
 
 	switchRecognition = function() {
-		if (this.recognition) {
-			this.stopRecognition();
+		var that = this;
+		if (that.recognition) {
+			that.stopRecognition();
 		} else {
-			this.startRecognition();
+			that.startRecognition();
 		}
 	},
 
 	setInput = function(text) {
+		var that = this;
 		$("#input").val(text);
-		this.send();
+		that.send();
 	},
 
 	updateRec = function() {
-		$("#rec").text(this.recognition ? "Stop" : "Speak");
+		var that = this;
+		$("#rec").removeClass("stopMic speakingMic");
+		$("#rec").addClass(that.recognition ? "speakingMic" : "stopMic");
 	},
 
 	send = function() {
@@ -120,7 +126,7 @@ apiRequest.prototype = function(){
 			default:
 			$("#response").append("<div class='result'><div class='query'>"+speech+"</div></div>");
 		}
-		
+		$('.content_Block').animate({scrollTop: $('.content_Block').prop("scrollHeight")}, 500);
 	};
 
 	return {
