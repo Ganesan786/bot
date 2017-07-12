@@ -123,6 +123,9 @@ apiRequest.prototype = function(){
             case "wishList":
                 g_wishList.init(parameters);
                 break;
+            case "sportsItems":
+            	g_sportsItems.init(parameters,speech);
+            	break;
 			default:
 			$("#response").append("<div class='result'><div class='query'>"+speech+"</div></div>");
 		}

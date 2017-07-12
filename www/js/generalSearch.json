@@ -1,0 +1,43 @@
+var generalSearch = {
+
+	"football":[
+		{"title":"Nike football 1","brand":"Nike","price":"$ 110","img":"../www/img/nf1.jpg","addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]},
+		{"title":"Nike football 2","brand":"Nike","price":"$ 120","img":"../www/img/nf2.jpg","addedPhoto":[{"img":"../www/img/nf6.jpg"},{"img":"../www/img/nf5.jpg"},{"img":"../www/img/nf4.jpg"}]},
+		{"title":"Nike football 3","brand":"Nike","price":"$ 130","img":"../www/img/nf3.jpg","addedPhoto":[{"img":"../www/img/nf1.jpg"},{"img":"../www/img/nf2.jpg"},{"img":"../www/img/nf5.jpg"}]},
+		{"title":"Nike football 4","brand":"Nike","price":"$ 140","img":"../www/img/nf4.jpg","addedPhoto":[{"img":"../www/img/nf5.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf1.jpg"}]},
+		{"title":"Nike football 5","brand":"Nike","price":"$ 150","img":"../www/img/nf5.jpg","addedPhoto":[{"img":"../www/img/nf2.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]},
+		{"title":"Nike football 6","brand":"Nike","price":"$ 160","img":"../www/img/nf6.jpg","addedPhoto":[{"img":"../www/img/nf5.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf6.jpg"}]},
+		{"title":"Adidas football","brand":"Adidas","price":"$ 110","img":"../www/img/af1.jpg","addedPhoto":[{"img":"../www/img/af3.jpg"},{"img":"../www/img/af4.jpg"},{"img":"../www/img/af2.jpg"}]},
+		{"title":"Adidas football","brand":"Adidas","price":"$ 120","img":"../www/img/af2.jpg","addedPhoto":[{"img":"../www/img/af6.jpg"},{"img":"../www/img/af1.jpg"},{"img":"../www/img/af3.jpg"}]},
+		{"title":"Adidas football","brand":"Adidas","price":"$ 130","img":"../www/img/af3.jpg","addedPhoto":[{"img":"../www/img/af1.jpg"},{"img":"../www/img/af2.jpg"},{"img":"../www/img/af5.jpg"}]},
+		{"title":"Adidas football","brand":"Adidas","price":"$ 140","img":"../www/img/af4.jpg","addedPhoto":[{"img":"../www/img/af5.jpg"},{"img":"../www/img/af5.jpg"},{"img":"../www/img/af4.jpg"}]},
+		{"title":"Adidas football","brand":"Adidas","price":"$ 150","img":"../www/img/af5.jpg","addedPhoto":[{"img":"../www/img/af7.jpg"},{"img":"../www/img/af3.jpg"},{"img":"../www/img/af1.jpg"}]},
+		{"title":"Adidas football","brand":"Adidas","price":"$ 160","img":"../www/img/af6.jpg","addedPhoto":[{"img":"../www/img/af2.jpg"},{"img":"../www/img/af7.jpg"},{"img":"../www/img/af7.jpg"}]},
+		{"title":"Adidas football","brand":"Adidas","price":"$ 170","img":"../www/img/af7.jpg","addedPhoto":[{"img":"../www/img/af4.jpg"},{"img":"../www/img/af6.jpg"},{"img":"../www/img/af5.jpg"}]},
+	],
+	"shoe":[
+		{"title":"Nike shoe 1","brand":"Nike","price":"$ 110","img":"../www/img/ns1.jpg"},
+		{"title":"Nike shoe 2","brand":"Nike","price":"$ 120","img":"../www/img/ns2.jpg"},
+		{"title":"Nike shoe 3","brand":"Nike","price":"$ 130","img":"../www/img/ns3.jpg"},
+		{"title":"Nike shoe 4","brand":"Nike","price":"$ 140","img":"../www/img/ns4.jpg"},
+		{"title":"Nike shoe 5","brand":"Nike","price":"$ 150","img":"../www/img/ns5.jpg"},
+		{"title":"Nike shoe 6","brand":"Nike","price":"$ 160","img":"../www/img/ns6.jpg"},
+		{"title":"Adidas shoe 1","brand":"Adidas","price":"$ 110","img":"../www/img/as1.jpg"},
+		{"title":"Adidas shoe 2","brand":"Adidas","price":"$ 120","img":"../www/img/as2.jpg"},
+		{"title":"Adidas shoe 3","brand":"Adidas","price":"$ 130","img":"../www/img/as3.jpg"},
+		{"title":"Adidas shoe 4","brand":"Adidas","price":"$ 140","img":"../www/img/as4.jpg"},
+		{"title":"Adidas shoe 5","brand":"Adidas","price":"$ 150","img":"../www/img/as5.jpg"},
+		{"title":"Adidas shoe 6","brand":"Adidas","price":"$ 160","img":"../www/img/as6.jpg"},
+		{"title":"Adidas shoe 7","brand":"Adidas","price":"$ 170","img":"../www/img/as7.jpg"},
+	],
+	"bag":[
+		{"title":"Adidas bag 1","brand":"Adidas","price":"$ 110","img":"../www/img/ab1.jpg"},
+		{"title":"Adidas bag 2","brand":"Adidas","price":"$ 120","img":"../www/img/ab2.jpg"},
+		{"title":"Adidas bag 3","brand":"Adidas","price":"$ 130","img":"../www/img/ab3.jpg"},
+		{"title":"Adidas bag 4","brand":"Adidas","price":"$ 140","img":"../www/img/ab4.jpg"},
+		{"title":"Adidas bag 5","brand":"Adidas","price":"$ 150","img":"../www/img/ab5.jpg"},
+		{"title":"Adidas bag 6","brand":"Adidas","price":"$ 160","img":"../www/img/ab6.jpg"},
+		{"title":"Adidas bag 7","brand":"Adidas","price":"$ 170","img":"../www/img/ab7.jpg"},
+	]
+
+}

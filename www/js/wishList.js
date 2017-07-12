@@ -33,7 +33,7 @@ wishList.prototype = function(){
                  htmlData = params+ " is already added in your wish list";
             }else{
                  wishListItems.items.push({list:params});
-                 htmlData = params+ " is added to wish list";
+                 htmlData = params+ " is added to your wish list";
             }
            
         }
