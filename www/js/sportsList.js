@@ -9,7 +9,7 @@ sportsItems.prototype = function(){
 	            loop: false,
 	            nav: false,
 				dots:false,
-	            margin: 40,
+	            margin: 20,
 	            items:2
 	          });
 	          owl.on('mousewheel', '.owl-stage', function(e) {

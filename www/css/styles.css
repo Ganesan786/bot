@@ -19,14 +19,15 @@ body, html {
     margin: 0 auto;
 }#input.search_Input {
     background: #f5f5f5;
-    padding: 50px 0;
+    padding: 25px 0;
     border: 1px solid #f5f5f5;
     width: 100%;
     box-sizing: border-box;
-    font-size: 45px;
+    font-size: 20px;
     text-align: center;
     border-left: 0;
     border-right: 0;
+    margin: 0;
 }.search_Input:focus {
     outline: none;
 }.hd_3 {
@@ -43,14 +44,14 @@ body, html {
 .footer_Block {
     background: #f5f5f5;
     width: 100%;
-    height: 100px;
+    height: 50px;
 }.loader {
-    font-size: 150px;
+    font-size: 60px;
     color: #f32955;
     text-align: center;
     display: none;
-	position: absolute;
-    bottom: 100px;
+    position: absolute;
+    bottom: 35px;
     width: 100%;
     z-index: 1;
 }.response_Block {
@@ -59,11 +60,11 @@ body, html {
     padding: 12px;
     box-sizing: border-box;
 }.query {
-    font-size: 40px;
+    font-size: 20px;
     background: #e6e6e6;
-    padding: 30px;
+    padding: 15px;
     border-radius: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
     display: inline-block;
     font-family: sans-serif;
     width: 80%;
@@ -108,17 +109,17 @@ body, html {
     width: 50%;
 }
 #demos .owl-carousel .item img {
-   padding: 1rem;
-    width: 340px;
-    height: 310px;
+    padding: 0;
+    width: 130px;
+    height: 140px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 15px;
 }
 #demos .owl-carousel .item {
-    background: #ececec;
-    border-radius: 30px;
-    height: 34rem;
-    padding: 0 25px;
+        background: #ececec;
+    border-radius: 10px;
+    height: 235px;
+    padding: 0 10px;
 }
 .col-spc-1 {
     width: 10%;
@@ -126,6 +127,10 @@ body, html {
 }
 .col-spc-8 {
     width: 80%;
+    float: left;
+}
+.col-spc-10 {
+    width: 100%;
     float: left;
 }
 .flx-aj {
@@ -140,40 +145,42 @@ body, html {
     cursor: pointer;
 }
 .productTitle {
-    padding: 14px 0;
+    padding: 4px 0;
     color: #797777;
+    font-size: 15px;
 }
 .productPrize {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 15px;
+
 }
 .viewItem {
     text-align: center;
     color: #0089ff;
-    padding-top: 10px;
-    font-size: 37px;
+    padding-top: 5px;
+    font-size: 15px;
 }
 #rec.speakingMic {
     color: red;
 }
 
-.customDialog {
+/*.customDialog {
     font-size: 45px;
-}
+}*/
 .customDialog.ui-dialog .ui-dialog-content {
     padding: 8px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 .arrowBackBtn {
-    font-size: 100px;
+    font-size: 40px;
     color: #9c9c9c;
 }
 .backText {
-    font-size: 30px;
+        font-size: 15px;
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 12px;
     vertical-align: top;
-    padding-top: 25px;
+    padding-top: 5px;
 }
 .blueAct {
     color: #0089ff;
@@ -183,7 +190,7 @@ body, html {
 }
 .dialogContainer {
     background: #f1f1f1;
-    padding: 55px;
+    padding: 20px;
 }
 .viewItemImg img {
     width: 100%;
@@ -197,10 +204,10 @@ body, html {
 .addListItem {
     display: block;
     float: left;
-    margin-right: 58px;
+    margin-right: 15px;
     border: 1px solid #c7c7c7;
-    height: 235px;
-    width: 238px;
+    height: 102px;
+    width: 102px;
 }
 .addListItem img {
     width: 100%;
@@ -212,41 +219,53 @@ body, html {
 .prodAddImg {
     float: left;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 .actionBlock .blueAct {
-    text-align: center;
-    padding: 22px;    font-size: 35px;
+        text-align: center;
+    padding: 10px;
+    font-size: 14px;
 }
 .actionBlock .blueAct:last-child {
-    border-top: 3px solid #fff;
+    border-top: 1px solid #fff;
 }
 .prodHeader {
-    font-size: 40px;
-    padding: 30px;
+    font-size: 20px;
+    padding: 10px;
 }
 .filterBlock {
     float: left;
     width: 100%;
-    padding: 50px;
-    height: 609px;
+    padding: 14px;
+    height: 250px;
     overflow: auto;
     
 }
+.filterBlock ul {
+    margin: 0;
+    display: block;
+    padding: 0;
+}
 .filterBlock li {
-    font-size: 35px;
+    font-size: 15px;
     font-weight: bold;
     float: left;
     display: block;
     width: 100%;
     text-align: center;
     background: #f1f1f1;
-    margin-bottom: 15px;
-    padding: 30px;
-    border-radius: 100px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 24px;
 }
 .filterBlock li:last-child {
     margin: 0;
+}
+.slideView .column, .columns {
+    padding: 0;
+}
+.actionBtn {
+    margin-bottom: 12px;
 }
 @keyframes blink {50% { color: transparent }}
 .loader__dot { animation: 1s blink infinite }
