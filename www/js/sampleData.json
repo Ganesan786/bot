@@ -3,37 +3,44 @@ var giftList = {
         {
            "img":"../www/img/m1.jpg",
            "title":"Marriage Gift one",
-           "price":"$ 150"
+           "price":"$ 150",
+           "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
         },
         {
            "img":"../www/img/m2.jpg",
            "title":"Marriage Gift two",
-           "price":"$ 250"
+           "price":"$ 250",
+            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
         },
         {
            "img":"../www/img/m3.jpg",
            "title":"Marriage Gift three",
-           "price":"$ 350"
+           "price":"$ 350",
+            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
         },
         {
            "img":"../www/img/m4.jpg",
            "title":"Marriage Gift four",
-           "price":"$ 450"
+           "price":"$ 450",
+            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
         },
         {
            "img":"../www/img/m5.jpg",
            "title":"Marriage Gift five",
-           "price":"$ 550"
+           "price":"$ 550",
+            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
         },
         {
            "img":"../www/img/m6.jpg",
            "title":"Marriage Gift six",
-           "price":"$ 650"
+           "price":"$ 650",
+            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
         },
         {
            "img":"../www/img/m7.jpg",
            "title":"Marriage Gift seven",
-           "price":"$ 750"
+           "price":"$ 750",
+            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
         },
         {
            "img":"../www/img/m8.jpg",

@@ -2,7 +2,7 @@ function dialogBox(){
 	this.dialogId;
 }
 dialogBox.prototype = function(){
-	init = function(_id){
+	init = function(_id,_data){
 		$("#"+_id).dialog({
 		    modal: true,
 		    draggable: false,
@@ -24,11 +24,24 @@ dialogBox.prototype = function(){
 		    }
 		});
 		this.dialogId = _id;
-		this.genData();
+		this.genData(_data);
+        
 	},
-	genData = function(){
+	genData = function(_data){
 		var template = Handlebars.templates["dialogTemplate"];
-		$("#"+this.dialogId).html(template);
+        var htmlData = template(_data);
+		$("#"+this.dialogId).html(htmlData);
+          var owl = $('.owl-carousel');
+	          owl.owlCarousel({
+	            loop: false,
+	            nav: false,
+				dots:false,
+	            margin: 20,
+	            items:3
+	          });
+	          owl.on('mousewheel', '.owl-stage', function(e) {
+	            e.preventDefault();
+	          });
 	},
 	closeDialog = function(){
 		$("#"+this.dialogId).dialog("close");

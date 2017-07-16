@@ -5,19 +5,33 @@
 <div class="dialogContainer">
 	<div class="productInfoHeader">
 	<div class="viewItemImg">
-		<img src="../www/img/m1.jpg" class="productImg" />
+		<img src={{img}} />
 	</div>
 	<div class="prodAddImg">
-		<ul class="addListImg">
+		<!--<ul class="addListImg">
 			<li class="addListItem"><img src="../www/img/m5.jpg" /></li>
 			<li class="addListItem"><img src="../www/img/m6.jpg" /></li>
 			<li class="addListItem"><img src="../www/img/m3.jpg" /></li>
-		</ul>
+		</ul>-->
+        
+        <section id="productExtraImg">
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="owl-carousel owl-theme extraProImg">
+                  {{#each addedPhoto}}
+                        <div class="addListItem"><img src={{img}} /></div>
+                  {{/each}}
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
 	</div>
 	</div>
 	<div class="productInfo">
 		<div class="prodHeader">
-			product for marriage gifts
+			{{title}}
 		</div>
 		<div class="actionBlock">
 			<div class="blueAct">Buy Item</div>

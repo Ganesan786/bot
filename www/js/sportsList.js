@@ -18,15 +18,18 @@ sportsItems.prototype = function(){
 	},
 	getData = function(_params,_speech){
        	var that = this;
-        if(_speech == "Nike" || _speech == "Adidas" ){
+       /* if(_params.adNiname == "Nike" || _params.adNiname == "Adidas" ){*/
             that.genTemplate(_params,_speech);
-        }else{
+        /*}else{
         	$("#response").append("<div class='result'><div class='query'>"+_speech+"</div></div>");
-        }
+        }*/
 	},
 	genTemplate = function(_params,_speech){
 		var obj = generalSearch[_params.adniList];
-		var filtered = _.filter(obj, function(type){ return type.brand == _speech });
+		var filtered = _.filter(obj, function(type){ return type.brand == _params.adNiname });
+        if(filtered.length == 0){
+            filtered = obj;
+        }
         var lists = {list:filtered};
         var template = Handlebars.templates["sliderTemplate"];
         var htmlData = template(lists);
@@ -35,6 +38,7 @@ sportsItems.prototype = function(){
         	$("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
         }else {
         	$("#response").append("<div class='result'><div class='slideView query'>"+htmlData+"</div></div>");
+            $("#response").append("<div class='result'><div class='query'>"+_speech+"</div></div>");
         }
 	};
 	return {
