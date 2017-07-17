@@ -9,19 +9,33 @@ apiRequest.prototype = function(){
 		that.accessToken 		= "24b9449d38e8424db925f984bf6814f1";
 		that.subscriptionKey 	= "24b9449d38e8424db925f984bf6814f1";
 		that.baseUrl 			= "https://api.api.ai/v1/";
-			$("#input").keypress(function(event) {
+			/*$("#input").keypress(function(event) {
 				if (event.which == 13) {
 					event.preventDefault();
 					that.send();
                     $(this).val("");
 				}
-			});
+			});*/
 			$("#rec").click(function(event) {
 				that.switchRecognition();
                 $(this).val("");
 			});
-	},
+						//setup before functions
+			var typingTimer;                //timer identifier
+			var doneTypingInterval = 2000;  //time in ms, 2 second for example
+			var $input = $('#input');
 
+			//on keyup, start the countdown
+			$input.on('keyup', function () {
+			  clearTimeout(typingTimer);
+			  typingTimer = setTimeout(that.send, doneTypingInterval);
+			});
+
+			//on keydown, clear the countdown 
+			$input.on('keydown', function () {
+			  clearTimeout(typingTimer);
+			});
+	},
 	startRecognition = function() {
 			var that = this;
 			that.recognition = new webkitSpeechRecognition();
@@ -98,6 +112,7 @@ apiRequest.prototype = function(){
 			success: function(data) {
 				//setResponse(JSON.stringify(data, undefined, 2));
 				g_apiRequest.successReturn(JSON.stringify(data, undefined, 2));
+				$("#input").val("");
 			},
 			error: function() {
 				g_apiRequest.setResponse("Internal Server Error");
@@ -125,6 +140,9 @@ apiRequest.prototype = function(){
                 break;
             case "sportsItems":
             	g_sportsItems.init(parameters,speech);
+            	break;
+            case "filterOptions":
+            	g_filterOptions.init(parameters,speech);
             	break;
 			default:
 			$("#response").append("<div class='result'><div class='query'>"+speech+"</div></div>");

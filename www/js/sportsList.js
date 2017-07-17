@@ -38,7 +38,7 @@ sportsItems.prototype = function(){
         	$("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
         }else {
         	$("#response").append("<div class='result'><div class='slideView query'>"+htmlData+"</div></div>");
-            $("#response").append("<div class='result'><div class='query'>"+_speech+"</div></div>");
+            /*$("#response").append("<div class='result'><div class='query'>"+_speech+"</div></div>");*/
         }
 	};
 	return {
