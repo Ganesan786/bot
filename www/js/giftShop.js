@@ -17,7 +17,7 @@ giftShop.prototype = function(){
 	          });
 	},
 	getData = function(giftName){
-        var obj = giftList[giftName];
+        var obj = giftList[giftName.toLocaleLowerCase()];
         var lists = {list:obj};
         var template = Handlebars.templates["sliderTemplate"];
         var htmlData = template(lists);

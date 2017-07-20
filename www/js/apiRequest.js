@@ -35,6 +35,7 @@ apiRequest.prototype = function(){
 			$input.on('keydown', function () {
 			  clearTimeout(typingTimer);
 			});
+			this.getNotify();
 	},
 	startRecognition = function() {
 			var that = this;
@@ -87,9 +88,13 @@ apiRequest.prototype = function(){
 		$("#rec").addClass(that.recognition ? "speakingMic" : "stopMic");
 	},
 
-	send = function() {
-		var text = $("#input").val();
-
+	send = function(_text) {
+		var text = "";
+		if(_text != undefined){
+			text = _text;
+		}else {
+			text = $("#input").val();
+		}
 		 $.ajaxSetup({
             beforeSend: function () {
                $(".loader").show();
@@ -124,14 +129,23 @@ apiRequest.prototype = function(){
 	setResponse = function(val) {
 		$("#response").html(val);
 	},
-		
+	getNotify = function(){
+		var speech = "Hey Kevin, you have 5 days until your brother's birthday. Let's surprise him with a gift?";
+		$("#response").append("<div class='result'><div class='query'>"+speech+"</div></div>");
+	}	
 	successReturn = function(val) {
 		var res = JSON.parse(val);
 		var action = res.result.action;
         var parameters = res.result.parameters;
+        var contexts = res.result.contexts;
 		var speech = res.result.fulfillment.messages[0].speech;
-		$("#response").append("<div class='query'>"+res.result.resolvedQuery+"</div>");
+		if($("#input").val() != ""){
+			$("#response").append("<div class='query'>"+res.result.resolvedQuery+"</div>");
+		}
 		switch(action) {
+			case "notify":
+				g_notify.init(parameters);
+				break;
 			case "giftShop":
                 g_giftShop.init(speech);
                 break;
@@ -142,7 +156,7 @@ apiRequest.prototype = function(){
             	g_sportsItems.init(parameters,speech);
             	break;
             case "filterOptions":
-            	g_filterOptions.init(parameters,speech);
+            	g_filterOptions.init(contexts,speech);
             	break;
 			default:
 			$("#response").append("<div class='result'><div class='query'>"+speech+"</div></div>");
@@ -159,7 +173,8 @@ apiRequest.prototype = function(){
 		updateRec:updateRec,
 		send:send,
 		setResponse:setResponse,
-		successReturn:successReturn
+		successReturn:successReturn,
+		getNotify:getNotify
 	}
 }();
 var g_apiRequest = new apiRequest();
