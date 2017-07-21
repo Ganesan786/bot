@@ -28,6 +28,8 @@ apiRequest.prototype = function(){
 			//on keyup, start the countdown
 			$input.on('keyup', function () {
 			  clearTimeout(typingTimer);
+			  var val = /^ *$/g.test(this.value);
+			  if(!val)
 			  typingTimer = setTimeout(that.send, doneTypingInterval);
 			});
 
@@ -142,6 +144,7 @@ apiRequest.prototype = function(){
 		if($("#input").val() != ""){
 			$("#response").append("<div class='query'>"+res.result.resolvedQuery+"</div>");
 		}
+		$("#filterBlock").html(" ").hide();
 		switch(action) {
 			case "notify":
 				g_notify.init(parameters);

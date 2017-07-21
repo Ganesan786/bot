@@ -1,5 +1,5 @@
-<ul>
+<ul class='shoppingList'>
     {{#each items}}
-        <li>{{list}}</li>
+        <li onClick="g_wishList.selectList(this)"><i class="fa fa-hand-o-right" aria-hidden="true"></i> {{list}}</li>
     {{/each}}
 </ul>

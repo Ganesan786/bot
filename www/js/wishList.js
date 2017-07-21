@@ -8,7 +8,7 @@ wishList.prototype = function(){
             this.removeData(params.any);
         }else if(wishlistTypes == "go to") {
             this.getData(params.any);
-        }else if(wishlistTypes == "wish list") {
+        }else if(wishlistTypes == "shopping list") {
             this.setData(params.any);
         }
         
@@ -25,15 +25,15 @@ wishList.prototype = function(){
         
         if(checkData == null){
             wishListItems.items.push({list:params});
-            htmlData = params+ " is added to wish list";
+            htmlData = params+ " is added to shopping list";
         }else {
             var getWishList = localStorage.getItem('wishlistData');
             wishListItems = JSON.parse(getWishList);
             if(checkValue(params)){
-                 htmlData = params+ " is already added in your wish list";
+                 htmlData = params+ " is already added in your shopping list";
             }else{
                  wishListItems.items.push({list:params});
-                 htmlData = params+ " is added to your wish list";
+                 htmlData = params+ " is added to your shopping list";
             }
            
         }
@@ -48,6 +48,9 @@ wishList.prototype = function(){
         var htmlData = template(JSON.parse(getWishList));
         $("#response").append("<div class='result'><div class='query listItems'>"+htmlData+"</div></div>");
     },
+    selectList = function(list){
+        g_apiRequest.send(list.innerText);
+    };
     removeData = function(){
         
     };
@@ -55,6 +58,7 @@ wishList.prototype = function(){
         init:init,
         setData:setData,
         getData:getData,
+        selectList:selectList,
         removeData:removeData
     }
 }();

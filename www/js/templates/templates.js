@@ -92,7 +92,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\r\n        <li>";
+  buffer += "\r\n        <li onClick=\"g_wishList.selectList(this)\"><i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> ";
   if (helper = helpers.list) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.list); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -100,7 +100,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<ul>\r\n    ";
+  buffer += "<ul class='shoppingList'>\r\n    ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.items), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\r\n</ul>";
