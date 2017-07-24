@@ -43,12 +43,18 @@ dialogBox.prototype = function(){
 	            e.preventDefault();
 	          });
 	},
+	addtoCart = function(name){
+		$("#"+this.dialogId).dialog("close");
+		var speech = name + " is added to your shopping cart";
+		$("#response").append("<div class='result'><div class='query'>"+speech+"</div></div>");
+	},
 	closeDialog = function(){
 		$("#"+this.dialogId).dialog("close");
 	};
 	return {
 		init:init,
 		genData:genData,
+		addtoCart:addtoCart,
 		closeDialog:closeDialog
 	}
 }();

@@ -68,6 +68,7 @@ body, html {
     display: inline-block;
     font-family: sans-serif;
     width: 80%;
+    border-top-left-radius: 0;
 }.result {
     display: flex;
     justify-content: flex-end;
@@ -75,6 +76,8 @@ body, html {
     display: inline-block;
     background: #0f8bed;
     color: #fff;
+    border-top-right-radius: 0;
+    border-top-left-radius: 15px;
 }
 .result .slideView.query {
     background:#fff;
@@ -280,6 +283,36 @@ body, html {
 .shoppingList {
     margin: 0;
 }
+
+/*.query::after {
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 18px solid #e6e6e6;
+    float: left;
+    content: '';
+    margin: -15px -23px;
+}
+
+.result .query::after{
+border-right:0;
+}
+
+.result .query::before {
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 18px solid #0f8bed;
+    border-right:0;
+    float: right;
+    content: '';
+    margin: -15px -22px;
+} 
+.slideView.query::before {
+    border: 0;
+}*/
 @keyframes blink {50% { color: transparent }}
 .loader__dot { animation: 1s blink infinite }
 .loader__dot:nth-child(2) { animation-delay: 250ms }

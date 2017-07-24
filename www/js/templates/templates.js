@@ -3,7 +3,7 @@
 templates['dialogTemplate'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
+  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
@@ -20,14 +20,16 @@ function program1(depth0,data) {
   if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + " />\r\n	</div>\r\n	<div class=\"prodAddImg\">\r\n		<!--<ul class=\"addListImg\">\r\n			<li class=\"addListItem\"><img src=\"../www/img/m5.jpg\" /></li>\r\n			<li class=\"addListItem\"><img src=\"../www/img/m6.jpg\" /></li>\r\n			<li class=\"addListItem\"><img src=\"../www/img/m3.jpg\" /></li>\r\n		</ul>-->\r\n        \r\n        <section id=\"productExtraImg\">\r\n          <div class=\"row\">\r\n            <div class=\"large-12 columns\">\r\n              <div class=\"owl-carousel owl-theme extraProImg\">\r\n                  ";
+    + " />\r\n	</div>\r\n	<div class=\"prodAddImg\">   \r\n        <section id=\"productExtraImg\">\r\n          <div class=\"row\">\r\n            <div class=\"large-12 columns\">\r\n              <div class=\"owl-carousel owl-theme extraProImg\">\r\n                  ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.addedPhoto), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </section>\r\n        \r\n        \r\n	</div>\r\n	</div>\r\n	<div class=\"productInfo\">\r\n		<div class=\"prodHeader\">\r\n			";
+  buffer += "\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </section>\r\n	</div>\r\n	</div>\r\n	<div class=\"productInfo\">\r\n		<div class=\"prodHeader\">\r\n			";
   if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\r\n		</div>\r\n		<div class=\"actionBlock\">\r\n			<div class=\"blueAct\">Buy Item</div>\r\n			<div class=\"blueAct\">Read Reviews</div>\r\n		</div>\r\n	</div>\r\n</div>\r\n</div>";
+    + "\r\n		</div>\r\n		<div class=\"actionBlock\">\r\n			<div class=\"blueAct\" onClick=\"g_wishList.setCart("
+    + escapeExpression((helper = helpers.json || (depth0 && depth0.json),options={hash:{},data:data},helper ? helper.call(depth0, depth0, options) : helperMissing.call(depth0, "json", depth0, options)))
+    + ")\">Add to cart</div>\r\n			<div class=\"blueAct\">Read Reviews</div>\r\n		</div>\r\n	</div>\r\n</div>\r\n</div>";
   return buffer;
   });
 templates['priceFilter'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -50,6 +52,36 @@ function program1(depth0,data) {
   stack1 = helpers.each.call(depth0, (depth0 && depth0.list), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\r\n</ul>";
+  return buffer;
+  });
+templates['slideCart'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\r\n                <div class=\"item\">\r\n                 <img src=";
+  if (helper = helpers.img) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.img); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " />\r\n                 <div class=\"productTitle\">";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\r\n                 <div class=\"productPrize\">";
+  if (helper = helpers.price) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.price); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\r\n                 <div class=\"viewItem\" onclick='g_wishList.removeData(this)'>Remove from cart</div>\r\n                </div>\r\n              ";
+  return buffer;
+  }
+
+  buffer += "<section id=\"demos\">\r\n      <div class=\"row\">\r\n        <div class=\"large-12 columns\">\r\n          <div class=\"owl-carousel owl-theme\">\r\n              ";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.items), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n          </div>\r\n        </div>\r\n      </div>\r\n</section>";
   return buffer;
   });
 templates['sliderTemplate'] = template(function (Handlebars,depth0,helpers,partials,data) {

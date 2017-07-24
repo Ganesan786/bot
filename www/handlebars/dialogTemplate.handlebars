@@ -7,13 +7,7 @@
 	<div class="viewItemImg">
 		<img src={{img}} />
 	</div>
-	<div class="prodAddImg">
-		<!--<ul class="addListImg">
-			<li class="addListItem"><img src="../www/img/m5.jpg" /></li>
-			<li class="addListItem"><img src="../www/img/m6.jpg" /></li>
-			<li class="addListItem"><img src="../www/img/m3.jpg" /></li>
-		</ul>-->
-        
+	<div class="prodAddImg">   
         <section id="productExtraImg">
           <div class="row">
             <div class="large-12 columns">
@@ -25,8 +19,6 @@
             </div>
           </div>
         </section>
-        
-        
 	</div>
 	</div>
 	<div class="productInfo">
@@ -34,7 +26,7 @@
 			{{title}}
 		</div>
 		<div class="actionBlock">
-			<div class="blueAct">Buy Item</div>
+			<div class="blueAct" onClick="g_wishList.setCart({{json this}})">Add to cart</div>
 			<div class="blueAct">Read Reviews</div>
 		</div>
 	</div>
