@@ -124,18 +124,18 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\r\n        <li onClick=\"g_wishList.selectList(this)\"><i class=\"fa fa-hand-o-right\" aria-hidden=\"true\"></i> ";
+  buffer += "\r\n	        <li onClick=\"g_wishList.selectList(this)\"><i class=\"fa fa-shopping-bag\" aria-hidden=\"true\"></i> ";
   if (helper = helpers.list) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.list); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</li>\r\n    ";
+    + "</li>\r\n	    ";
   return buffer;
   }
 
-  buffer += "<ul class='shoppingList'>\r\n    ";
+  buffer += "\r\n  <div class=\"list-heading\">Shopping List</div>\r\n  	<ul class='shoppingList'>\r\n	    ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.items), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\r\n</ul>";
+  buffer += "\r\n	</ul>\r\n";
   return buffer;
   });
 })();

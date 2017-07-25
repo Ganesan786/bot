@@ -12,6 +12,8 @@ wishList.prototype = function(){
             this.setData(params.any);
         }else if(wishlistTypes == "cart") {
             this.getData(wishlistTypes);
+        }else if(wishlistTypes == "place order"){
+            this.placeOrder();
         }
           var owl = $('.owl-carousel');
               owl.owlCarousel({
@@ -24,6 +26,7 @@ wishList.prototype = function(){
               owl.on('mousewheel', '.owl-stage', function(e) {
                 e.preventDefault();
               });
+        
     },
     setData = function(params){
         var checkData = localStorage.getItem('wishlistData');
@@ -61,6 +64,10 @@ wishList.prototype = function(){
             var template = Handlebars.templates["slideCart"];
             var htmlData = template(lists);
             $("#response").append("<div class='result'><div class='slideView query'>"+htmlData+"</div></div>");
+            if(lists){
+                htmlData = "Let's place the order?";
+                $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
+            }   
         }else {
             // Retrieve the object from storage
             var getDataList = localStorage.getItem('wishlistData');
@@ -97,13 +104,21 @@ wishList.prototype = function(){
         localStorage.setItem('cart', JSON.stringify(cartListData));   
         $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
         $("#dialogBox").dialog("close");
+        $('.content_Block').animate({scrollTop: $('.content_Block').prop("scrollHeight")}, 500);
         
     },
     selectList = function(list){
         g_apiRequest.send(list.innerText);
-    };
+    },
+    placeOrder = function(){
+        var htmlData = "Your order has to be successfully placed!"
+        $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
+    },
     removeData = function(_this){
-        $(_this).parent().parent().remove();
+        //$(_this).parent().parent().remove();
+        $(_this).parent().parent().fadeOut( "slow", function() {
+            $(this).remove();
+        });
     };
     return {
         init:init,
@@ -111,6 +126,7 @@ wishList.prototype = function(){
         getData:getData,
         selectList:selectList,
         setCart:setCart,
+        placeOrder:placeOrder,
         removeData:removeData
     }
 }();
