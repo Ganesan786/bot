@@ -15,7 +15,7 @@ wishList.prototype = function(){
         }else if(wishlistTypes == "place order"){
             this.placeOrder();
         }
-          var owl = $('.owl-carousel');
+          var owl = $('.cartSlider');
               owl.owlCarousel({
                 loop: false,
                 nav: false,
@@ -26,7 +26,6 @@ wishList.prototype = function(){
               owl.on('mousewheel', '.owl-stage', function(e) {
                 e.preventDefault();
               });
-        
     },
     setData = function(params){
         var checkData = localStorage.getItem('wishlistData');
@@ -114,10 +113,22 @@ wishList.prototype = function(){
         var htmlData = "Your order has to be successfully placed!"
         $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
     },
-    removeData = function(_this){
+    removeData = function(_title,_index,_this){
         //$(_this).parent().parent().remove();
+        var getList = localStorage.getItem('cart');
+        var cartListData = {"items":{}};
+        var lists = JSON.parse(getList);
+        lists  = _.without(lists.items, _.findWhere(lists.items, {
+            title: _title
+        }));
+
+        localStorage.removeItem("cart");
+        if(lists.length>0){
+            cartListData.items = lists;
+            localStorage.setItem('cart', JSON.stringify(cartListData)); 
+        }
         $(_this).parent().parent().fadeOut( "slow", function() {
-            $(this).remove();
+            $('.cartSlider').trigger('remove.owl.carousel', [_index]);
         });
     };
     return {

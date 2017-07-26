@@ -74,11 +74,17 @@ function program1(depth0,data) {
   if (helper = helpers.price) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.price); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</div>\r\n                 <div class=\"viewItem\" onclick='g_wishList.removeData(this)'>Remove from cart</div>\r\n                </div>\r\n              ";
+    + "</div>\r\n                 <div class=\"viewItem\" onclick='g_wishList.removeData(\"";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\","
+    + escapeExpression(((stack1 = (data == null || data === false ? data : data.index)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + ",this)'>Remove from cart</div>\r\n                </div>\r\n              ";
   return buffer;
   }
 
-  buffer += "<section id=\"demos\">\r\n      <div class=\"row\">\r\n        <div class=\"large-12 columns\">\r\n          <div class=\"owl-carousel owl-theme\">\r\n              ";
+  buffer += "<section id=\"demos\">\r\n      <div class=\"row\">\r\n        <div class=\"large-12 columns\">\r\n          <div class=\"owl-carousel owl-theme cartSlider\">\r\n              ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.items), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\r\n          </div>\r\n        </div>\r\n      </div>\r\n</section>";

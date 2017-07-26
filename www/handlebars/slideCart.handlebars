@@ -1,13 +1,13 @@
 <section id="demos">
       <div class="row">
         <div class="large-12 columns">
-          <div class="owl-carousel owl-theme">
+          <div class="owl-carousel owl-theme cartSlider">
               {{#each items}}
                 <div class="item">
                  <img src={{img}} />
                  <div class="productTitle">{{title}}</div>
                  <div class="productPrize">{{price}}</div>
-                 <div class="viewItem" onclick='g_wishList.removeData(this)'>Remove from cart</div>
+                 <div class="viewItem" onclick='g_wishList.removeData("{{title}}",{{@index}},this)'>Remove from cart</div>
                 </div>
               {{/each}}
           </div>
