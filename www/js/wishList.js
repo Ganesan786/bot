@@ -12,9 +12,9 @@ wishList.prototype = function(){
             this.setData(params.any);
         }else if(wishlistTypes == "cart") {
             this.getData(wishlistTypes);
-        }else if(wishlistTypes == "place order"){
+        }/*else if(wishlistTypes == "place order"){
             this.placeOrder();
-        }
+        }*/
           var owl = $('.cartSlider');
               owl.owlCarousel({
                 loop: false,
@@ -64,7 +64,14 @@ wishList.prototype = function(){
             var htmlData = template(lists);
             $("#response").append("<div class='result'><div class='slideView query'>"+htmlData+"</div></div>");
             if(lists){
-                htmlData = "Let's place the order?";
+                var totalPrice = 0;
+                _.each(lists.items,function(item){totalPrice+=Number(item.price.replace("$ ","")) });
+                var details = {
+                    price:totalPrice,
+                    quantity:lists.items.length
+                };
+                var template = Handlebars.templates["placeOrder"];
+                var htmlData = template(details);
                 $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
             }   
         }else {
@@ -126,6 +133,16 @@ wishList.prototype = function(){
         if(lists.length>0){
             cartListData.items = lists;
             localStorage.setItem('cart', JSON.stringify(cartListData)); 
+            var getList = localStorage.getItem('cart');
+            var lists = JSON.parse(getList);
+            var totalPrice = 0;
+                _.each(lists.items,function(item){totalPrice+=Number(item.price.replace("$ ","")) });
+                $(".totalPrice:last").html(totalPrice+" $");
+                $(".quantity:last").html(lists.items.length);
+        }else {
+            htmlData = "Your cart is empty";
+            $(".placeOrder:last").parent().parent().remove();
+            $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
         }
         $(_this).parent().parent().fadeOut( "slow", function() {
             $('.cartSlider').trigger('remove.owl.carousel', [_index]);

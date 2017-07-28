@@ -32,6 +32,23 @@ function program1(depth0,data) {
     + ")\">Add to cart</div>\r\n			<div class=\"blueAct\">Read Reviews</div>\r\n		</div>\r\n	</div>\r\n</div>\r\n</div>";
   return buffer;
   });
+templates['placeOrder'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  buffer += "<div class=\"placeOrder\">\r\n	<div><span class=\"placeLable\">Total price : </span><span class=\"totalPrice\">";
+  if (helper = helpers.price) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.price); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + " $</span></div>\r\n	<div><span class=\"placeLable\">Quantity : </span><span class=\"quantity\">";
+  if (helper = helpers.quantity) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.quantity); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</span></div>\r\n	<div>Let's place the order?</div>\r\n</div>";
+  return buffer;
+  });
 templates['priceFilter'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};

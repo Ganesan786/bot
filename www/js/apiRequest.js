@@ -2,6 +2,7 @@ function apiRequest() {
 	this.subscriptionKey;
 	this.baseUrl;
 	this.recognition;
+	this.resetContexts = true;
 }
 apiRequest.prototype = function(){
 	init = function(){
@@ -90,7 +91,7 @@ apiRequest.prototype = function(){
 		$("#rec").addClass(that.recognition ? "speakingMic" : "stopMic");
 	},
 
-	send = function(_text) {
+	send = function(_text,_reset) {
 		var text = "";
 		if(_text != undefined){
 			text = _text;
@@ -115,11 +116,12 @@ apiRequest.prototype = function(){
 				"Authorization": "Bearer " + g_apiRequest.accessToken
 			},
 			//data: JSON.stringify({ q: text, lang: "en" }),
-			data: JSON.stringify({query: text, lang: "en", sessionId: "runbarry"}),
+			data: JSON.stringify({query: text, lang: "en", resetContexts:g_apiRequest.resetContexts,sessionId: "runbarry"}),
 			success: function(data) {
 				//setResponse(JSON.stringify(data, undefined, 2));
 				g_apiRequest.successReturn(JSON.stringify(data, undefined, 2));
 				$("#input").val("");
+				g_apiRequest.resetContexts = false;
 			},
 			error: function() {
 				g_apiRequest.setResponse("Internal Server Error");
@@ -132,7 +134,7 @@ apiRequest.prototype = function(){
 		$("#response").html(val);
 	},
 	getNotify = function(){
-		var speech = "Hey Kevin, you have 5 days until your brother's birthday. Let's surprise him with a gift?";
+		var speech = "Hey Kevin, you have 5 days  until your brother's birthday. Let's surprise him with a gift?";
 		$("#response").append("<div class='result'><div class='query'>"+speech+"</div></div>");
 	}	
 	successReturn = function(val) {
@@ -147,13 +149,19 @@ apiRequest.prototype = function(){
 		$("#filterBlock").html(" ").hide();
 		switch(action) {
 			case "notify":
-				g_notify.init(parameters);
+				g_notify.suggestion(parameters);
+				break;
+			case "notiResultAct":
+				g_notify.getData(parameters);
 				break;
 			case "giftShop":
                 g_giftShop.init(speech);
                 break;
             case "wishList":
                 g_wishList.init(parameters);
+                break;
+            case "placeOrdAct":
+                g_wishList.placeOrder();
                 break;
             case "sportsItems":
             	g_sportsItems.init(parameters,speech);

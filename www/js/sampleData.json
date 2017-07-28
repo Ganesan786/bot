@@ -4,130 +4,147 @@ var giftList = {
            "img":"../www/img/m1.jpg",
            "title":"Marriage Gift one",
            "price":"$ 150",
-           "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
+           "addedPhoto":[{"img":"../www/img/m8.jpg"},{"img":"../www/img/m1.jpg"},{"img":"../www/img/m5.jpg"}]
         },
         {
            "img":"../www/img/m2.jpg",
            "title":"Marriage Gift two",
            "price":"$ 250",
-            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
+            "addedPhoto":[{"img":"../www/img/m7.jpg"},{"img":"../www/img/m2.jpg"},{"img":"../www/img/m4.jpg"}]
         },
         {
            "img":"../www/img/m3.jpg",
            "title":"Marriage Gift three",
            "price":"$ 350",
-            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
+            "addedPhoto":[{"img":"../www/img/m6.jpg"},{"img":"../www/img/m3.jpg"},{"img":"../www/img/m3.jpg"}]
         },
         {
            "img":"../www/img/m4.jpg",
            "title":"Marriage Gift four",
            "price":"$ 450",
-            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
+            "addedPhoto":[{"img":"../www/img/m5.jpg"},{"img":"../www/img/m4.jpg"},{"img":"../www/img/m8.jpg"}]
         },
         {
            "img":"../www/img/m5.jpg",
            "title":"Marriage Gift five",
            "price":"$ 550",
-            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
+            "addedPhoto":[{"img":"../www/img/m4.jpg"},{"img":"../www/img/m5.jpg"},{"img":"../www/img/m7.jpg"}]
         },
         {
            "img":"../www/img/m6.jpg",
            "title":"Marriage Gift six",
            "price":"$ 650",
-            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
+            "addedPhoto":[{"img":"../www/img/m3.jpg"},{"img":"../www/img/m6.jpg"},{"img":"../www/img/m6.jpg"}]
         },
         {
            "img":"../www/img/m7.jpg",
            "title":"Marriage Gift seven",
            "price":"$ 750",
-            "addedPhoto":[{"img":"../www/img/nf3.jpg"},{"img":"../www/img/nf4.jpg"},{"img":"../www/img/nf5.jpg"}]
+            "addedPhoto":[{"img":"../www/img/m2.jpg"},{"img":"../www/img/m7.jpg"},{"img":"../www/img/m5.jpg"}]
         },
         {
            "img":"../www/img/m8.jpg",
            "title":"Marriage Gift eight",
-           "price":"$ 850"
+           "price":"$ 850",
+           "addedPhoto":[{"img":"../www/img/m1.jpg"},{"img":"../www/img/m8.jpg"},{"img":"../www/img/m2.jpg"}]
         },
         {
            "img":"../www/img/m3.jpg",
            "title":"Marriage Gift nine",
-           "price":"$ 950"
+           "price":"$ 950",
+           "addedPhoto":[{"img":"../www/img/m1.jpg"},{"img":"../www/img/m5.jpg"},{"img":"../www/img/m1.jpg"}]
         },
         {
            "img":"../www/img/m1.jpg",
            "title":"Marriage Gift ten",
-           "price":"$ 1050"
+           "price":"$ 1050",
+           "addedPhoto":[{"img":"../www/img/m2.jpg"},{"img":"../www/img/m6.jpg"},{"img":"../www/img/m3.jpg"}]
         },
         {
            "img":"../www/img/m2.jpg",
            "title":"Marriage Gift eleven",
-           "price":"$ 1150"
+           "price":"$ 1150",
+           "addedPhoto":[{"img":"../www/img/m3.jpg"},{"img":"../www/img/m7.jpg"},{"img":"../www/img/m5.jpg"}]
         },
         {
            "img":"../www/img/m3.jpg",
            "title":"Marriage Gift twelve",
-           "price":"$ 1250"
+           "price":"$ 1250",
+           "addedPhoto":[{"img":"../www/img/m4.jpg"},{"img":"../www/img/m4.jpg"},{"img":"../www/img/m8.jpg"}]
         },
     ],
     "birthday":[
         {
            "img":"../www/img/b1.jpg",
            "title":"Birthday Gift one",
-           "price":"$ 150"
+           "price":"$ 150",
+           "addedPhoto":[{"img":"../www/img/m8.jpg"},{"img":"../www/img/m1.jpg"},{"img":"../www/img/m5.jpg"}]
         },
         {
            "img":"../www/img/b2.jpg",
            "title":"Birthday Gift two",
-           "price":"$ 250"
+           "price":"$ 250",
+           "addedPhoto":[{"img":"../www/img/m7.jpg"},{"img":"../www/img/m2.jpg"},{"img":"../www/img/m4.jpg"}]
         },
         {
            "img":"../www/img/b3.jpg",
            "title":"Birthday Gift three",
-           "price":"$ 350"
+           "price":"$ 350",
+           "addedPhoto":[{"img":"../www/img/m6.jpg"},{"img":"../www/img/m3.jpg"},{"img":"../www/img/m3.jpg"}]
         },
         {
            "img":"../www/img/b4.jpg",
            "title":"Birthday Gift four",
-           "price":"$ 450"
+           "price":"$ 450",
+           "addedPhoto":[{"img":"../www/img/m5.jpg"},{"img":"../www/img/m4.jpg"},{"img":"../www/img/m8.jpg"}]
         },
         {
            "img":"../www/img/b5.jpg",
            "title":"Birthday Gift five",
-           "price":"$ 550"
+           "price":"$ 550",
+           "addedPhoto":[{"img":"../www/img/m4.jpg"},{"img":"../www/img/m5.jpg"},{"img":"../www/img/m7.jpg"}]
         },
         {
            "img":"../www/img/b6.jpg",
            "title":"Birthday Gift six",
-           "price":"$ 650"
+           "price":"$ 650",
+           "addedPhoto":[{"img":"../www/img/m3.jpg"},{"img":"../www/img/m6.jpg"},{"img":"../www/img/m6.jpg"}]
         },
         {
            "img":"../www/img/m7.jpg",
            "title":"Birthday Gift seven",
-           "price":"$ 750"
+           "price":"$ 750",
+           "addedPhoto":[{"img":"../www/img/m2.jpg"},{"img":"../www/img/m7.jpg"},{"img":"../www/img/m5.jpg"}]
         },
         {
            "img":"../www/img/b1.jpg",
            "title":"Birthday Gift eight",
-           "price":"$ 850"
+           "price":"$ 850",
+           "addedPhoto":[{"img":"../www/img/m1.jpg"},{"img":"../www/img/m8.jpg"},{"img":"../www/img/m2.jpg"}]
         },
         {
            "img":"../www/img/b3.jpg",
            "title":"Birthday Gift nine",
-           "price":"$ 950"
+           "price":"$ 950",
+           "addedPhoto":[{"img":"../www/img/m1.jpg"},{"img":"../www/img/m5.jpg"},{"img":"../www/img/m1.jpg"}]
         },
         {
            "img":"../www/img/m1.jpg",
            "title":"Birthday Gift ten",
-           "price":"$ 1050"
+           "price":"$ 1050",
+           "addedPhoto":[{"img":"../www/img/m2.jpg"},{"img":"../www/img/m6.jpg"},{"img":"../www/img/m3.jpg"}]
         },
         {
            "img":"../www/img/b4.jpg",
            "title":"Birthday Gift eleven",
-           "price":"$ 1150"
+           "price":"$ 1150",
+           "addedPhoto":[{"img":"../www/img/m3.jpg"},{"img":"../www/img/m7.jpg"},{"img":"../www/img/m5.jpg"}]
         },
         {
            "img":"../www/img/b2.jpg",
            "title":"Birthday Gift twelve",
-           "price":"$ 1250"
+           "price":"$ 1250",
+           "addedPhoto":[{"img":"../www/img/m4.jpg"},{"img":"../www/img/m4.jpg"},{"img":"../www/img/m8.jpg"}]
         },
     ]
            

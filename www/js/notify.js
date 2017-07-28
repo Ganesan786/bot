@@ -3,12 +3,13 @@ function notify(){
 }
 notify.prototype = function(){
     init = function(params){
-        var notifyTypes = params.variables;
+       /* var notifyTypes = params.variables;
+        var yesType = params.yesVar;
         if(notifyTypes == "suggestions"){
             this.suggestion(notifyTypes);
         }else if(notifyTypes == "yes") {
             this.getData(notifyTypes);
-        }
+        }*/
         
     },
     getData = function(){
