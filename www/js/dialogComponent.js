@@ -6,7 +6,7 @@ dialogBox.prototype = function(){
 		$("#"+_id).dialog({
 		    modal: true,
 		    draggable: false,
-		    resizable: false,
+		    resizable: true,
 		    show: 'blind',
 		    hide: 'blind',
 		    width: $(window).width(),
@@ -16,6 +16,9 @@ dialogBox.prototype = function(){
 		    dialogClass: 'customDialog',
 		    create: function() {
         		$(this).siblings('.ui-dialog-titlebar').remove();
+    		},
+    		resize: function( event, ui ) {
+
     		},
 		    buttons: {
 		        /*"I've read and understand this": function() {
