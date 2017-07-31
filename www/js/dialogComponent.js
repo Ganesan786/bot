@@ -6,7 +6,7 @@ dialogBox.prototype = function(){
 		$("#"+_id).dialog({
 		    modal: true,
 		    draggable: false,
-		    resizable: true,
+		    resizable: false,
 		    show: 'blind',
 		    hide: 'blind',
 		    width: $(window).width(),

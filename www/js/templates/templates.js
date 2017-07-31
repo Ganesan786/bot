@@ -1,5 +1,21 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['addressSelect'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"cardSelect addressType\">\r\n	<div class=\"item\">\r\n          \r\n           <div class=\"productTitle blckColor\">Town Hall House\r\nLevel 2, 456 Kent Street\r\nSydney NSW 2000</div>\r\n 		   <div class=\"viewItem\" onclick=\"g_wishList.addressSelect()\">Select</div>\r\n    </div>\r\n    <div class=\"item\">\r\n         \r\n           <div class=\"productTitle blckColor\">City of Sydney\r\nGPO Box 1591\r\nSydney NSW 2001</div>\r\n 		   <div class=\"viewItem\" onclick=\"g_wishList.addressSelect()\">Select</div>\r\n    </div>\r\n</div>";
+  });
+templates['cardType'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"cardSelect\">\r\n	<div class=\"item\">\r\n           <img src=\"../www/img/masterCard.png\">\r\n           <div class=\"productTitle\">xxxxxxxxxxxxx123</div>\r\n 		   <div class=\"viewItem\" onclick=\"g_wishList.cardType()\">Select</div>\r\n    </div>\r\n    <div class=\"item\">\r\n           <img src=\"../www/img/visaCard.jpg\">\r\n           <div class=\"productTitle\">xxxxxxxxxxxxx687</div>\r\n 		   <div class=\"viewItem\" onclick=\"g_wishList.cardType()\">Select</div>\r\n    </div>\r\n</div>";
+  });
 templates['dialogTemplate'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -46,7 +62,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.quantity) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.quantity); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</span></div>\r\n	<div>Let's place the order?</div>\r\n</div>";
+    + "</span></div>\r\n	<div>Sure. Where would you want the product to be delivered</div>\r\n</div>";
   return buffer;
   });
 templates['priceFilter'] = template(function (Handlebars,depth0,helpers,partials,data) {

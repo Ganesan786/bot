@@ -161,7 +161,8 @@ apiRequest.prototype = function(){
                 g_wishList.init(parameters);
                 break;
             case "placeOrdAct":
-                g_wishList.placeOrder();
+            	var param = {wishlistData:["cart"]};
+                g_wishList.init(param);
                 break;
             case "sportsItems":
             	g_sportsItems.init(parameters,speech);

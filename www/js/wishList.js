@@ -1,5 +1,5 @@
 function wishList(){
-    
+    this.orderPlaced = false;
 }
 wishList.prototype = function(){
     init = function(params){
@@ -73,6 +73,10 @@ wishList.prototype = function(){
                 var template = Handlebars.templates["placeOrder"];
                 var htmlData = template(details);
                 $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
+                var template = Handlebars.templates["addressSelect"];
+                var htmlData = template();
+                $("#response").append("<div class='result'>"+htmlData+"</div>");
+                $('.content_Block').animate({scrollTop: $('.content_Block').prop("scrollHeight")}, 500);
             }   
         }else {
             // Retrieve the object from storage
@@ -120,6 +124,36 @@ wishList.prototype = function(){
         var htmlData = "Your order has to be successfully placed!"
         $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
     },
+    addressSelect = function(){
+        var emoji = "<i class='fa fa-smile-o' ></i>";
+        if(g_wishList.orderPlaced){
+            var htmlData = "Your order has been already placed "+emoji;
+            $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
+            $('.content_Block').animate({scrollTop: $('.content_Block').prop("scrollHeight")}, 500);
+            return;
+        }
+        var htmlData = "Got it. Which card should I be using ?"
+        $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
+        var template = Handlebars.templates["cardType"];
+        var htmlData = template();
+        $("#response").append("<div class='result'>"+htmlData+"</div>");
+        $('.content_Block').animate({scrollTop: $('.content_Block').prop("scrollHeight")}, 500);
+    },
+    cardType = function(){
+        var emoji = "<i class='fa fa-smile-o' ></i>";
+        if(g_wishList.orderPlaced){
+            var htmlData = "Your order has been already placed "+emoji;
+            $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
+            $('.content_Block').animate({scrollTop: $('.content_Block').prop("scrollHeight")}, 500);
+            return;
+        }
+        
+        var orderNo = "INR786000123";
+        var htmlData = "Your order has been placed and should be reaching you by tomorrow "+emoji+"<br />You can track your order: "+orderNo;
+        $("#response").append("<div class='result'><div class='query'>"+htmlData+"</div></div>");
+        $('.content_Block').animate({scrollTop: $('.content_Block').prop("scrollHeight")}, 500);
+        g_wishList.orderPlaced = true;
+    },
     removeData = function(_title,_index,_this){
         //$(_this).parent().parent().remove();
         var getList = localStorage.getItem('cart');
@@ -155,6 +189,8 @@ wishList.prototype = function(){
         selectList:selectList,
         setCart:setCart,
         placeOrder:placeOrder,
+        addressSelect:addressSelect,
+        cardType:cardType,
         removeData:removeData
     }
 }();
