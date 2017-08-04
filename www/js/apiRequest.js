@@ -10,18 +10,20 @@ apiRequest.prototype = function(){
 		that.accessToken 		= "24b9449d38e8424db925f984bf6814f1";
 		that.subscriptionKey 	= "24b9449d38e8424db925f984bf6814f1";
 		that.baseUrl 			= "https://api.api.ai/v1/";
-			/*$("#input").keypress(function(event) {
+			$("#input").keypress(function(event) {
 				if (event.which == 13) {
 					event.preventDefault();
+					var val = /^ *$/g.test(this.value);
+			  		if(!val)
 					that.send();
-                    $(this).val("");
+                    //$(this).val("");
 				}
-			});*/
+			});
 			$("#rec").click(function(event) {
 				that.switchRecognition();
                 $(this).val("");
 			});
-						//setup before functions
+			/*			//setup before functions
 			var typingTimer;                //timer identifier
 			var doneTypingInterval = 2000;  //time in ms, 2 second for example
 			var $input = $('#input');
@@ -37,7 +39,7 @@ apiRequest.prototype = function(){
 			//on keydown, clear the countdown 
 			$input.on('keydown', function () {
 			  clearTimeout(typingTimer);
-			});
+			});*/
 			this.getNotify();
 	},
 	startRecognition = function() {
